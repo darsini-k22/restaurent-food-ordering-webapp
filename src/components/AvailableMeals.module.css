@@ -1,0 +1,22 @@
+.meals {
+  @apply max-w-4xl w-4/5 my-8 mx-auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+
+
+.meals ul {
+  @apply list-none m-0 p-0;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
