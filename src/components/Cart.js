@@ -1,17 +1,26 @@
 import React from "react";
+import styles from "./Cart.module.css";
 
 export default function Cart() {
+  const cartItems = (
+    <ul>
+      {[{ id: "c1", name: "Shusi", quantity: 3, price: 25.99 }].map((items) => {
+        return <li>{items.name}</li>;
+      })}
+    </ul>
+  );
+
   return (
-   
-      <div className="flex items-center justify-center flex-col h-32 w-1/2 rounded-xl ">
-        <header className="text-center font-bold text-xl text-white bg-red-500">
-          Cart
-        </header>
-        <p className=" p-5">Choose the food you want and click on the Order Now button to order it.</p>
-        <footer>
-          <button className="bg-red-500 justify-end ">Order Now</button>
-        </footer>
+    <div>
+      {cartItems}
+      <div className={styles.total}>
+        <span>Total Amount:</span>
+        <span>39.55</span>
       </div>
-  
+      <div className={styles.actions}>
+        <button className={styles["button--alt"]}>Close</button>
+        <button className={styles.button}>Order</button>
+      </div>
+    </div>
   );
 }

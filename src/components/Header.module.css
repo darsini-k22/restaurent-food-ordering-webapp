@@ -1,5 +1,5 @@
 .header {
-  @apply flex bg-red-500 justify-between p-3;
+  @apply flex bg-red-500 justify-between p-3 z-0;
 }
 
 .header h1 {

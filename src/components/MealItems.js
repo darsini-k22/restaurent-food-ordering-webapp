@@ -1,4 +1,5 @@
 import React from "react";
+import MealItemForm from "./MealItemForm";
 import styles from"./MealItems.module.css";
 
 export default function MealItems(props) {
@@ -12,6 +13,7 @@ export default function MealItems(props) {
       </div>
       <div>
           {/* meal form for adding meals into cart */}
+          <MealItemForm/>
       </div>
     </li>
   );
